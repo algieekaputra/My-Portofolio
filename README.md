@@ -1,3 +1,3 @@
 # My-Portofolio
 
-Compilation of my electronics related projects
+Compilation of my electronics engineering related projects
