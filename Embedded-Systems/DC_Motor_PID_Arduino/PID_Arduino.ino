@@ -5,9 +5,9 @@
 long int enc = 0;
 int value; // store digital sensor input value
 int sensorInput = 6;
-//float w;
+float w;
 float rpm;
-float sampling_time = 200; //ms
+float sampling_time = 50; //ms
 float setpoint = 50;
 
 float error, P, I, D, prev_error, pwm_motor;
@@ -31,7 +31,7 @@ void setup() {
 void loop() {
   
   if(millis()-time_prev >= sampling_time){
-//    w = enc/(sampling_time/1000)*(2*3.141592/100); //kecepatan sudut rad/s
+    w = enc/(sampling_time/1000)*(2*3.141592/100); //kecepatan sudut rad/s
     rpm = enc/(sampling_time/1000)*60/100; //kecepatan rpm
     enc = 0;
     
